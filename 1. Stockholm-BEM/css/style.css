@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+/*INCIO DE ESTILOS DEL MAIN*/
+.main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__grid {
+    
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 250px);
+    gap: 10px;
+}
+
+/* ESTILOS PARA TODAS LAS IMG */
+.main__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.main__img1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.main__img2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.main__img3 {
+    grid-area: 1 / 3 / 3 / 4;
+}
+
+.main__img4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.main__img5 {
+    grid-area: 1 / 5 / 3 / 7;
+}
+
+.main__img6 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.main__img7 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.main__img8 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.main__img9 {
+    grid-area: 3 / 1 / 5 / 3;
+}
+
+.main__img10 {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.main__img11 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.main__img12 {
+    grid-area: 3 / 5 / 5 / 6;
+}
+
+.main__img13 {
+    grid-area: 3 / 6 / 4 / 7;
+}
+
+.main__img14 {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+.main__img15 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.main__img16 {
+    grid-area: 4 / 6 / 5 / 7;
+}
+
+.main__img17 {
+    grid-area: 5 / 1 / 6 / 3;
+}
+
+.main__img18 {
+    grid-area: 5 / 4 / 6 / 5;
+}
+
+.main__img19 {
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.main__img20 {
+    grid-area: 5 / 6 / 6 / 7;
+}
+
+.main__img21 {
+    grid-area: 5 / 5 / 6 / 6;
+}
+/* FIN DE ESTILOS DE LAS IMG */
+
+/* SECTION 2*/
+
+
+
+
+@media screen and (min-width:761px) and (max-width: 1024px) {
+    .main__grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .main__img {
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+/* GRID EN PANTALLAS PEQUEÑAS */
+@media (max-width: 760px) {
+
+
+    .main__grid {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .main__img {
+        height: 100%;
+        object-fit: cover;
+    }
+}

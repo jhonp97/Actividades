@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*INICIO DEL NAV */
+.nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.nav__list {
+    width: 350px;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.nav__item{
+    color: black;
+}
+
+.nav__a{
+    letter-spacing: 2px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.nav__a--green{
+    color: #77875b;
+}
+
+.nav__a:hover{
+    color: #77875b;
+}
+
+.nav__logo{
+    width: auto;
+    margin-left: 5px;
+}
+
+.fa-solid{
+    width: 50px;
+    
+    padding-right: 10px;
+    color: black;
+}
+/* fin estilos del nav*/
+
+
+/* FOOTER */
+.footer{
+    
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__section{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.footer__logo{
+    width: auto;
+    margin-top: 100px;
+    margin-bottom: 30px
+}
+
+.footer__text{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: normal;
+    line-height: 150%;
+    font-size: 1rem;
+    width:410px;
+    text-align: center;
+    color: #848484;
+}
+
+
+.footer__p{
+    font-size: 1rem;
+    padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #848484 ;
+    text-align: center;
+}
