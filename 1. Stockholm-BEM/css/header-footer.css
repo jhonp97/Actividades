@@ -15,7 +15,8 @@
 }
 
 .nav__list {
-    width: 350px;
+    min-width: 300px;
+    max-width: 350px;
     display: flex;
     list-style: none;
     gap: 20px;
@@ -52,7 +53,6 @@
 
 .fa-solid{
     width: 50px;
-    
     padding-right: 10px;
     color: black;
 }

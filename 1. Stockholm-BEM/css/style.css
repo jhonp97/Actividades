@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     
+    
 }
 
 
@@ -28,6 +29,7 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 250px);
     gap: 10px;
+   
 }
 
 /* ESTILOS PARA TODAS LAS IMG */
@@ -36,6 +38,12 @@
     height: 100%;
     display: block;
     object-fit: cover;
+    transition: transform 0.5s ease;
+    
+}
+
+.main__img:hover{
+    transform: translateY(10px);
 }
 
 .main__img1 {
@@ -128,10 +136,13 @@
 
 
 
+
+
 @media screen and (min-width:761px) and (max-width: 1024px) {
     .main__grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, 1fr);
         grid-template-rows: auto;
+        transition: all 1s ease;
     }
 
     .main__img {
@@ -145,12 +156,16 @@
 
 
     .main__grid {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto-fit;
     }
 
     .main__img {
         height: 100%;
         object-fit: cover;
+        grid-area: auto;
     }
 }
