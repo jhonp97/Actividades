@@ -1,44 +1,44 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --fondo-color: #e8e8e8;
-    --sombra-box-shadow: 6px  6px 8px 1px #c8c8c8, -6px -6px 8px 1px white;
+    --sombra-box-shadow: 6px 6px 8px 1px #c8c8c8, -6px -6px 8px 1px white;
 }
 
-.Body{
+.Body {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    /* background:var(--fondo-color); */
-    background-color: black;
+    background: var(--fondo-color);
+    /* background-color: black; */
 
 }
-.Container{
-    gap: 20px;
-    width: 22vw;
-    height: 75vh;
-    box-shadow: var(--sombra-box-shadow)
-}
 
-.Container
- {
-    padding: 10px;
+
+.Container {
+    padding: 30px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    background:var(--fondo-color);
+    gap: 20px;
+    width: 22vw;
+    height: 75vh;
     box-shadow: var(--sombra-box-shadow);
-    
+
+    background: var(--fondo-color);
+
+
 }
-.Container-blocks{
+
+.Container-blocks {
     padding: 10px;
     border-radius: 10px;
     justify-content: start;
@@ -47,11 +47,12 @@
     flex-grow: 1;
     box-shadow: var(--sombra-box-shadow);
     transition: all 1.5s ease;
-   overflow: hidden;
-    
+    overflow: hidden;
+
 }
-.Container-blocksIndex{
-   
+
+.Container-blocksIndex {
+
     font-family: Arial, Helvetica, sans-serif;
     color: #626262;
     display: flex;
@@ -62,11 +63,11 @@
     height: 70px;
     border-radius: 10px;
     cursor: pointer;
-    background:var(--fondo-color);
+    background: var(--fondo-color);
     box-shadow: var(--sombra-box-shadow);
     transition: all 1s ease-in-out;
-   
-    
+
+
 }
 
 .Container-blocksIndex:hover {
@@ -75,7 +76,7 @@
 }
 
 
-.Container-blocksText{
+.Container-blocksText {
     width: 100%;
     display: flex;
     justify-content: start;
@@ -91,8 +92,8 @@
     overflow: hidden;
 }
 
-.isActive{
+.isActive {
     opacity: 1;
-    height:5em ;
-    
+    height: 5em;
+
 }
