@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Body {
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: #dbdbdb;
+    color: #232323;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contain {
+    /* z-index: 2; */
+    background-color: #dbdbdb;
+    border-radius: 8px;
+    width: 20vw;
+    height: 19vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 10px #c8c8c8;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.Contain:hover {
+    scale: 0.9;
+}
+
+.Contain:active {
+    scale: 0.95;
+}
+
+/* .Contain-img{
+    padding: 5px;
+    width: 90%;
+border: solid 1px blie;
+} */
+.Contain-imgPicture {
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+
+}
+
+.Ligthbox {
+    
+    display: none;
+    position: absolute;
+   
+    /* display: flex; */
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all .5s ease;
+
+
+
+    /* pointer-events: none; */
+}
+
+.Close {
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 10px #c8c8c8;
+    background-color: #dbdbdb;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Close:hover {
+    scale: 0.9;
+}
+
+.Close:active {
+    scale: 1.09;
+}
+
+.Ligthbox-contain {
+
+    background-color: #dbdbdb;
+    border-radius: 8px;
+    width: 55vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 10px #c8c8c8;
+}
+
+.Lightbox-img {
+    border: solid 1px;
+    width: 95%;
+    height: 92%;
+    object-fit: cover;
+
+}
