@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    position: relative;
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.Header {
+    /* position: relative; */
+    /* position: fixed; */
+    width: 100vw;
+    height: 15vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-title {
+    /* position: absolute; */
+    font-size: 2rem;
+    margin-left: 11.5rem;
+    color: black;
+    z-index: 999;
+}
+
+.Header-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20%;
+    /* margin-right: 200px; */
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    border: solid 1px gray;
+    background-color: white;
+    z-index: 99999;
+    
+
+}
+
+.Header-icon .active {
+    opacity: 1;
+    /* position: absolute;
+    z-index: 999; */
+    transition: all 2s ease;
+}
+
+.fa-solid {
+    opacity: 0;
+    position: absolute;
+    
+
+}
+
+.Header-menu.menu-open {
+    transform: translateX(0);
+    /* opacity: 1; */
+    
+    /* transition: width 0.8s ease; */
+
+   
+}
+.Header-menu.menu-open .menu-links{
+    opacity: 1;
+    transform: translateY(-10%);
+}
+body.menu-open .Header-title {
+    transition: all 2s ease;
+    color: white;
+}
+
+.Header-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15%;
+    transform: translateX(100%);
+    /* opacity: 1; */
+    transition: transform 0.8s ease;
+    z-index: 9;
+    overflow: hidden;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(+200%);
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+
+.menu-link {
+    width: 100% ;
+    font-size: 36px;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.8s ease;
+}
+
+.menu-link:hover, .menu-linkContain:hover {
+    opacity: 0.7;
+}
+
+.Header-menuList {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    list-style: none;
+    cursor: pointer;
+    color: white;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.8s ease, height 0.8s ease;
+}
+
+.Header-menuList.active {
+    opacity: 1;
+    height: 100%;
+}
+.menu-linkContain{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+width: 20%;
+
+flex-grow: 1;
+transition: all 1s ease;
+}
+
+
+.Header-menuItem-1List{
+    list-style: none;
+}
+
+.Header-menuItem-img{
+position: absolute;
+top: 0;
+right: 30%;
+opacity: 0;
+transition: all 1s ease-in-out;
+}
+.Header-menuItem-img.active{
+    opacity: 1;
+}
+
+
+/* -------------------------------------------------------
+----------------comienzo del contenido-------------------- 
+--------------------------------------------------------*/
+
+.Main {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.Section {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    justify-content: space-between;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease;
+
+}
+
+.Section.active {
+    /* position: absolute; */
+    opacity: 1;
+
+}
+
+.Section-content {
+    margin-top: 50px;
+    margin-left: 12.5rem;
+
+    /* border: solid 2px blue; */
+    width: 50%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.Section-contentAutor {
+    color: #b8b8b8;
+    font-size: 1rem;
+}
+
+.Section-contentTitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+}
+
+.Section-contentText {
+    padding: 0;
+    margin-top: 20px;
+    width: 23rem;
+    text-align: justify;
+    color: #959595;
+}
+
+.Section-img {
+    object-fit: cover;
+    width: 400px;
+    height: auto;
+    margin-right: 350px;
+
+}
+
+.Section-img:nth-child(2) {
+    /* object-fit: contain; */
+    margin-top: 80px;
+    width: 460px;
+    /* height: 500px; */
+}
+
+.Btn-fixed {
+    position: absolute;
+    top: 58%;
+    left: 10.2%;
+    border: none;
+    background-color: black;
+    width: 8.125rem;
+    height: 3.125rem;
+    color: white;
+    font-size: 1rem;
+}
+
+/* -------------------------------------------------------
+----------------comienzo de parte inferior----------------
+--------------------------------------------------------*/
+
+
+.Inferior {
+    margin-top: 110px;
+    background-color: white;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Inferior-barra {
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    height: 4px;
+    background-color: #efefef;
+
+    padding-left: 12.5rem;
+}
+
+.Inferior-barraContain {
+    width: 12rem;
+}
+
+.Inferior-barra1,
+.Inferior-barra2 {
+
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(32, 32, 32);
+    transition: width 0.5s ease-in-out;
+}
+
+.Inferior-barra2 {
+    border-radius: 4px;
+    width: 0;
+    height: 100%;
+    background-color: rgb(32, 32, 32);
+    transition: width 0.5s ease-in-out;
+}
+
+
+
+
+.Inferior-interaccion {
+
+    padding-left: 12.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: row;
+
+
+}
+
+.Inferior-interaccion1,
+.Inferior-interaccion2 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 13rem;
+    height: 100%;
+}
+
+.Inferior-interaccionText {
+    font-size: 0.9rem;
+    color: #959595;
+}
+
+.Inferior-interaccionTitle {
+    font-size: 0.9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* -------------------------------------------------------
+--------------------- media queries  ---------------------
+--------------------------------------------------------*/
+
+/* Estilos para tablet  */
+@media (max-width: 1024px) {
+    .Header-title {
+        font-size: 1.8rem;
+        margin-left: 2rem;
+    }
+
+    .Header-menu {
+        padding-left: 5%;
+    }
+
+    .Section-content {
+        margin-left: 5%;
+        width: 70%;
+    }
+
+    .Section-img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .Inferior-barra {
+        padding-left: 5%;
+    }
+
+    .Inferior-interaccion {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+/* para mobiles  */
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        position: relative;
+    }
+
+    .Header-title {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .Header-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .Header-menu {
+        padding-left: 5%;
+    }
+
+    .menu-links {
+        align-items: center;
+    }
+
+    .menu-link {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .Main {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .Section {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .Section-content {
+        margin-left: 0;
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Section-contentText {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Section-img {
+        margin-right: 0;
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .Btn-fixed {
+        position: static;
+        margin: 20px auto;
+        display: block;
+        left: auto;
+        top: auto;
+    }
+
+    .Inferior {
+        margin-top: 20px;
+    }
+
+    .Inferior-barra,
+    .Inferior-interaccion {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .Inferior-interaccion {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Inferior-interaccion1,
+    .Inferior-interaccion2 {
+        width: auto;
+        margin-top: 0;
+    }
+}
