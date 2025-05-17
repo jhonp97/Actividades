@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+width: 100vw;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+#root {
+  margin-top: 2rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border: solid 2px gray;
+}
+
+.Gallery{
+  
+}
+.Gallery-title{
+  font-family: cursive;
+  letter-spacing: 2px;
+
+}
+
+.Loading{
+
+}
+.Gallery-grid{
+ width: 100%;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 6px;
+}
+
+.Card{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+padding: 10px;
+border: solid 2px gray;
+box-shadow: 0 0 10px black;
+border-radius: 8px;
+margin: 5px;
+}
+img{
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
