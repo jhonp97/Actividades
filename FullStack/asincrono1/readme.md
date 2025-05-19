@@ -1,6 +1,6 @@
 # Prueba técnica de Fullstack Trainee
 
-Deberás de generar una galería de fotos usando la API de flickr (https://www.flickr.com/services/api/), la galería debe de ser Responsive y adaptarse a todos los tamaños de pantalla.
+Deberás de generar una galería de fotos usando la API de flickr (cm), la galería debe de ser Responsive y adaptarse a todos los tamaños de pantalla.
 
 Parte de la prueba consiste en elegir un estilo de diseño para la galería.
 

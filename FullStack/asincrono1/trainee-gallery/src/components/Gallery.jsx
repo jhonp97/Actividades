@@ -6,10 +6,11 @@ const Gallery = () => {
 
     const [imagenes, setImagenes] = useState([]);
     const [loading, setLoading] = useState(true)
+    const [page, setPage] = useState(1)
 
     const API_KEY = "yG38_VeCbQOz-ZowBbY-7TkVo7dYj3CXKFByW3N0PUU";
     const COLLECTION_ID = "10728337"; // ID de la colección "Birds"
-    const url = `https://api.unsplash.com/collections/${COLLECTION_ID}/photos?client_id=${API_KEY}&per_page=10`;
+    const url = `https://api.unsplash.com/collections/${COLLECTION_ID}/photos?client_id=${API_KEY}&page=${page}&per_page=4`;
 
     useEffect(() => {
         setTimeout(() => {
@@ -29,7 +30,7 @@ const Gallery = () => {
             }
             listaImagenes();
         }, 1000);
-    }, []);
+    }, [page]);
     console.log(url)
     return (
         <>
@@ -46,6 +47,11 @@ const Gallery = () => {
                                 </article>
                             );
                         })}
+                </div>
+                <div>
+                    <button onClick={()=>setPage(p=>Math.max(p-1,1))} disabled={loading || page===1}>Anterior</button>
+                    {page}
+                    <button onClick={()=>setPage(p=> p+1)} disabled={loading}>Siguiente</button>
 
                 </div>
             {/* </section> */}
