@@ -28,7 +28,7 @@ const Gallery = () => {
                 setLoading(false)
             }
             listaImagenes();
-        }, 2000);
+        }, 1000);
     }, []);
     console.log(url)
     return (
