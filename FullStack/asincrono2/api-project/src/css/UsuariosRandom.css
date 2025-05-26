@@ -1,0 +1,31 @@
+.usuarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 2px 2px 8px gray;
+  width: 300px;
+  height: 500px;
+}
+
+.user-image {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-body p {
+  margin: 10px 0;
+}
