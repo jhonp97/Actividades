@@ -1,0 +1,45 @@
+
+## Alumnos 
+### 1
+GET http://localhost:3002/api/v1/alumnos
+
+### 2
+GET  http://localhost:3002/api/v1/alumnos/curso/:nombreCurso
+
+### 3
+POST http://localhost:3002/api/v1/alumnos
+Content-Type: application/json
+
+{
+  
+  "name": "Jhon",
+  "curso": "Programación"
+ }
+
+
+## PROFESORES
+### 1 Listar profesores
+GET http://localhost:3002/api/v1/profesores
+
+### 2. Buscar profesores x curso
+GET  http://localhost:3002/api/v1/profesores/curso/:nombreCurso
+
+
+### 3. crear nuevo profesor
+POST  http://localhost:3002/api/v1/profesores
+Content-Type: application/json
+
+{
+  
+  "name": "Thomas",
+  "curso": "Programación"
+ }
+
+
+## CURSOS
+### 1 listar los cursos
+GET  http://localhost:3002/api/v1/cursos
+
+
+### 2 Buscar datos de un curso incluyendo sus profesores y alumnos
+GET  http://localhost:3002/api/v1/cursos/Programación
